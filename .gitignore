@@ -4,3 +4,6 @@ __pycache__/
 .venv/
 venv/
 .env
+.pytest_cache/
+# Price data is downloaded from Yahoo Finance: python scripts/download_data.py
+data/*.csv

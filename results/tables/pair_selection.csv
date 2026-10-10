@@ -1,0 +1,5 @@
+pair,return_corr_train,eg_pvalue_train,eg_pvalue_test,passes_5pct,passes_bonferroni
+KO/PEP,0.7383,0.0621,0.1659,False,False
+V/MA,0.9071,0.003,0.0069,True,True
+XOM/CVX,0.8278,0.8045,0.6163,False,False
+HD/LOW,0.7983,0.2323,0.2545,False,False

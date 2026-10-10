@@ -1,0 +1,175 @@
+{
+  "diagnosis": {
+    "R_original": 0.0010237809081908922,
+    "R_mle": 5.051302876258811e-06,
+    "R_ratio": 202.67660310029632,
+    "innovation_sd_test": 0.00809791510835793,
+    "mean_sqrt_S_test": 0.042131690229934154,
+    "typical_abs_z": 0.10674992701486467,
+    "max_abs_z_test": 1.0785007468550791,
+    "ols_spread_daily_change_sd": 0.008597843779153829,
+    "ols_spread_level_sd": 0.03198597985976733,
+    "ols_spread_lag1_autocorr": 0.96389050875558,
+    "mle_q_alpha": 3.4203813353543326e-06,
+    "mle_q_beta": 1.8566214040400086e-06,
+    "latent_free_mle": {
+      "mu": 0.2364171713194289,
+      "q_beta": 1.8250971651062007e-06,
+      "phi": 0.2646497111988557,
+      "sigma2_s": 9.111965527868931e-06,
+      "R": 3.9538198813277444e-17,
+      "half_life_days": 0.5214188390921372,
+      "spread_sd": 0.0031302121712393875,
+      "loglik": 5221.366229771978
+    }
+  },
+  "test_period": {
+    "adf_p_static_spread_test": 0.3326053393444559,
+    "static_z_min": -5.8544969512953005,
+    "static_z_max": 2.449168951768285,
+    "static_z_mean": -1.349734728365422
+  },
+  "pair_selection": [
+    {
+      "pair": "KO/PEP",
+      "return_corr_train": 0.7383,
+      "eg_pvalue_train": 0.0621,
+      "eg_pvalue_test": 0.1659,
+      "passes_5pct": false,
+      "passes_bonferroni": false
+    },
+    {
+      "pair": "V/MA",
+      "return_corr_train": 0.9071,
+      "eg_pvalue_train": 0.003,
+      "eg_pvalue_test": 0.0069,
+      "passes_5pct": true,
+      "passes_bonferroni": true
+    },
+    {
+      "pair": "XOM/CVX",
+      "return_corr_train": 0.8278,
+      "eg_pvalue_train": 0.8045,
+      "eg_pvalue_test": 0.6163,
+      "passes_5pct": false,
+      "passes_bonferroni": false
+    },
+    {
+      "pair": "HD/LOW",
+      "return_corr_train": 0.7983,
+      "eg_pvalue_train": 0.2323,
+      "eg_pvalue_test": 0.2545,
+      "passes_5pct": false,
+      "passes_bonferroni": false
+    }
+  ],
+  "vma": [
+    {
+      "model": "Static OLS",
+      "Annual return": 0.0145,
+      "Annual vol": 0.0414,
+      "Sharpe": 0.3689,
+      "Max drawdown": -0.0552,
+      "Trades": 4.0,
+      "Days in market": 0.5234,
+      "Hit rate": 0.75,
+      "Avg holding (days)": 131.0,
+      "Turnover": 7.0,
+      "Sharpe 95% CI low": -0.4669,
+      "Sharpe 95% CI high": 1.1266,
+      "P(Sharpe<=0)": 0.1872
+    },
+    {
+      "model": "Rolling OLS",
+      "Annual return": 0.0312,
+      "Annual vol": 0.0476,
+      "Sharpe": 0.6695,
+      "Max drawdown": -0.0533,
+      "Trades": 13.0,
+      "Days in market": 0.4756,
+      "Hit rate": 0.8462,
+      "Avg holding (days)": 36.6923,
+      "Turnover": 28.1635,
+      "Sharpe 95% CI low": -0.0779,
+      "Sharpe 95% CI high": 1.4905,
+      "P(Sharpe<=0)": 0.0378
+    },
+    {
+      "model": "Kalman (original spec)",
+      "Annual return": 0.0,
+      "Annual vol": 0.0,
+      "Sharpe": NaN,
+      "Max drawdown": 0.0,
+      "Trades": 0.0,
+      "Days in market": 0.0,
+      "Hit rate": NaN,
+      "Avg holding (days)": NaN,
+      "Turnover": 0.0,
+      "Sharpe 95% CI low": NaN,
+      "Sharpe 95% CI high": NaN,
+      "P(Sharpe<=0)": NaN
+    },
+    {
+      "model": "Kalman (MLE) innovation",
+      "Annual return": 0.0092,
+      "Annual vol": 0.0155,
+      "Sharpe": 0.5972,
+      "Max drawdown": -0.0123,
+      "Trades": 26.0,
+      "Days in market": 0.0429,
+      "Hit rate": 0.8077,
+      "Avg holding (days)": 1.6538,
+      "Turnover": 52.0255,
+      "Sharpe 95% CI low": -0.2241,
+      "Sharpe 95% CI high": 1.2244,
+      "P(Sharpe<=0)": 0.0706
+    },
+    {
+      "model": "Kalman beta + rolling z",
+      "Annual return": 0.0214,
+      "Annual vol": 0.0366,
+      "Sharpe": 0.5975,
+      "Max drawdown": -0.0411,
+      "Trades": 33.0,
+      "Days in market": 0.4367,
+      "Hit rate": 0.697,
+      "Avg holding (days)": 13.2424,
+      "Turnover": 65.166,
+      "Sharpe 95% CI low": -0.3475,
+      "Sharpe 95% CI high": 1.5594,
+      "P(Sharpe<=0)": 0.1094
+    },
+    {
+      "model": "Latent-spread state space",
+      "Annual return": 0.0159,
+      "Annual vol": 0.0218,
+      "Sharpe": 0.7348,
+      "Max drawdown": -0.0173,
+      "Trades": 3.0,
+      "Days in market": 0.1037,
+      "Hit rate": 1.0,
+      "Avg holding (days)": 34.6667,
+      "Turnover": 6.0382,
+      "Sharpe 95% CI low": 0.1548,
+      "Sharpe 95% CI high": 1.2753,
+      "P(Sharpe<=0)": 0.01
+    }
+  ],
+  "latent_choice": {
+    "mu": 0.21481083157244807,
+    "q_beta": 1e-06,
+    "phi": 0.968396501192424,
+    "sigma2_s": 2.1546983499964666e-05,
+    "R": 6.0748857069113216e-06,
+    "half_life_days": 21.58418042591949,
+    "spread_sd": 0.01861098522909153,
+    "loglik": 5217.158954204154,
+    "filtered_spread_sd_train": 0.006928670792327114
+  },
+  "kalman_mle": {
+    "q_alpha": 3.4203813353543326e-06,
+    "q_beta": 1.8566214040400086e-06,
+    "R": 5.051302876258811e-06,
+    "loglik": 5228.723847951408
+  }
+}
